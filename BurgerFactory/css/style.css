@@ -1,0 +1,203 @@
+/* ---------- Variables de couleurs ---------- */
+:root {
+    --cream: #FFF8F0;
+    --brown: #7A4A2E;
+    --orange: #F28C38;
+    --goldy: #F5C242;
+    --purp: #8E6BBF;
+    --darkPurp: #5E3F8C;
+    --Green: #8DB255;
+    --darkGreen: #6F9140;
+    --red: #D9534F;
+    --shadows: 0 6px 0 rgba(122, 74, 46, 0.15), 0 10px 25px rgba(122, 74, 46, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Fredoka", sans-serif;
+    color: var(--brown);
+    background-color: var(--cream);
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 20%, var(--cream) 40%),
+    url("../img/fond-automne.jpg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* ---------- Menu de navigation ---------- */
+nav {
+    text-align: center;
+    padding: 25px 10px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background-color: var(--purp);
+    color: var(--cream);
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: var(--shadows);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--orange);
+    transform: translateY(-2px);
+}
+
+nav a.actif {
+    background-color: var(--darkPurp);
+}
+
+
+/* ---------- Bloc central ---------- */
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 30px;
+    background-color: rgba(255, 248, 240, 0.85);
+    border: 4px solid white;
+    border-radius: 30px;
+    box-shadow: var(--shadows);
+    text-align: center;
+}
+
+
+/* ---------- diaporama, bannière, ingrédients ---------- */
+.cadre-image {
+    display: inline-block;
+    padding: 10px;
+    background-color: white;
+    border: 4px solid var(--goldy);
+    border-radius: 20px;
+    box-shadow: var(--shadows);
+}
+
+.cadre-image img {
+    display: block;
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+#diaporama {
+    width: 400px;
+    height: 300px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+#nom-burger {
+    margin-top: 15px;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--orange);
+}
+
+/* ---------- Formulaires ---------- */
+fieldset {
+    display: inline-block;
+    min-width: 320px;
+    padding: 20px 30px;
+    border: 3px solid var(--orange);
+    border-radius: 20px;
+    background-color: white;
+    text-align: left;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: var(--darkPurp);
+}
+
+.champ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+input, select {
+    padding: 6px 10px;
+    font-family: inherit;
+    color: var(--brown);
+    background-color: white;
+    border: 2px solid var(--brown);
+    border-radius: 10px;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: var(--purp);
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 22px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1em;
+    color: white;
+    background-color: var(--Green);
+    border: none;
+    border-radius: 999px;
+    box-shadow: var(--shadows);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--darkGreen);
+}
+
+
+/* ---------- Messages d'erreur et de succès ---------- */
+.message {
+    min-height: 1.5em;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+.erreur {
+    color: var(--red);
+}
+
+.succes {
+    color: var(--darkGreen);
+}
+
+
+/* ---------- "Qui sommes-nous ?" ---------- */
+.texte-presentation {
+    margin-bottom: 25px;
+    padding: 20px 25px;
+    background-color: var(--purp);
+    color: var(--cream);
+    border: 4px solid white;
+    border-radius: 20px;
+    box-shadow: var(--shadows);
+    line-height: 1.6;
+}
+
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
