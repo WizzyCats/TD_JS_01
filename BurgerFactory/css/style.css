@@ -194,6 +194,11 @@ button:hover {
     line-height: 1.6;
 }
 
+.texte-presentation ul {
+    display: inline-block;
+    text-align: left;
+}
+
 
 /* ---------- Footer ---------- */
 footer {

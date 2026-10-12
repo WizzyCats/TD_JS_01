@@ -16,8 +16,25 @@
     <a href="qui-sommes-nous.html">Qui Sommes Nous?</a>
 </nav>
 <main>
-
+<fieldset>
+    <legend>Créer votre Burger</legend>
+    <div class="champ">
+        <label for="nom-burger">Nom de votre burger</label><input id="nom-burger" type="text">
+    </div>
+    <div class="champ">
+        <label for="ingredient-1">Ingrédient 1</label><select id="ingredient-1"></select>
+    </div>
+    <div class="champ">
+        <label for="ingredient-2">Ingrédient 2</label><select id="ingredient-2"></select>
+    </div>
+    <div class="champ">
+        <label for="ingredient-3">Ingrédient 3</label><select id="ingredient-3"></select>
+    </div>
+    <button id="btn-creer-burger">Créer Votre Burger</button>
+</fieldset>
+    <p class="message"  id="message-burger"></p>
 </main>
+<script src="js/ingredients-base.js"></script>
 <script src="js/burger.js"></script>
 </body>
 </html>

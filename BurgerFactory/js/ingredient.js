@@ -5,32 +5,7 @@ const qteIngredientUser = document.getElementById("quantite-ingredient");
 const msgUser = document.getElementById("message-ingredient");
 const creaIngreUser = document.getElementById("btn-creer-ingredient");
 
-// Liste d'ingrédients de base
-const ingredientDeBase = [
-    {nom:"Poulet", quantite:5},
-    {nom:"Boeuf", quantite:5},
-    {nom:"Colin", quantite:5},
-    {nom:"Saumon", quantite:5},
-    {nom:"Bacon", quantite:5},
-    {nom:"Oeuf", quantite:5},
-    {nom:"salade", quantite:5},
-    {nom:"Tomate", quantite:5},
-    {nom:"Oignon" , quantite:5},
-    {nom:"Avocat", quantite:5},
-    {nom:"Choux Rouge", quantite:5},
-    {nom:"Ananas", quantite:5},
-    {nom:"Cornichons", quantite:5},
-    {nom:"Jalapiños", quantite:5},
-    {nom:"Cheddar", quantite:5},
-    {nom:"Emmental", quantite:5},
-    {nom:"Raclette", quantite:5},
-    {nom:"Sauce Citron & Aneth", quantite:5},
-    {nom:"Sauce Avocat Pimentée", quantite:5},
-    {nom:"Sauce Burger", quantite:5},
-    {nom:"Sauce Ketchup", quantite:5},
-    {nom:"Sauce Fromagère", quantite:5}
-];
-
+// evitons de perdre les saisies lors d'un F5
 const ingredient = JSON.parse(localStorage.getItem("ingredient")) || ingredientDeBase; // Stockage de variables pour pas les perdre au rechargement de la page
 
 creaIngreUser.addEventListener("click", creerIngredient); // Ecoutes du click
@@ -41,6 +16,7 @@ function creerIngredient(){
     const qteIngredient = Number(qteIngredientUser.value);
     console.log(nomIngredient, qteIngredient);
 
+    // Verification si le nom dde l'ingrédient existe déjà, si la qté est au moins de 1 et créa du burger
     if(nomIngredient === ""){
         msgUser.classList.remove("succes");
         msgUser.classList.add("erreur");

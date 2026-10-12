@@ -1,5 +1,4 @@
 // Tableau contenant les burgers clé/valeur
-
 const burgers = [
     {nom:"Burger Boeuf", img:"./img/burger/Burger_Boeuf.png"},
     {nom:"Burger Boeuf Raclette", img:"./img/burger/Burger_BoeufRaclette.png"},
@@ -10,14 +9,12 @@ const burgers = [
 ];
 
 // Mes constantes qui vont répérer des éléments par leurs id
-
 const imageDiapo = document.getElementById("diaporama");
 const afficheNom = document.getElementById("nom-burger");
 
 let compteurDiaporama = 0; // compteur qui sera incrémenté pour changer l'image dans la fonction imageSuivante
 
 // fonction qui fait le diapo via le compteur
-
 function imageSuivante(){
     compteurDiaporama++;
     if (compteurDiaporama >= burgers.length){
@@ -29,7 +26,6 @@ function imageSuivante(){
 setInterval(imageSuivante, 10000); // permet de changer l'image toutes les 10s
 
 // fonction qui va afficher le nom du burger dans mon html
-
 function afficheBurger(){
     afficheNom.textContent = burgers[compteurDiaporama].nom;
 }
