@@ -24,7 +24,7 @@ fetch(urlApi)
             li.textContent = production.nom;
             listeProd.appendChild(li);
         });
-    }) // En cas d'erreur on l'affiche dans la console navigateur
+    }) // En cas d'erreur, on l'affiche dans la console navigateur
     .catch(erreur => {
         console.error("Impossible de contacter l'API :", erreur);
     });
